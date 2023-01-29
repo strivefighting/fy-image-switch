@@ -1,0 +1,49 @@
+{
+  "name": "fy-image-switch",
+  "version": "1.0.0",
+  "description": "Some simple picture switching effects",
+  "main": "index.js",
+  "scripts": {
+    "build-umd": "webpack --config webpack.config-umd.js",
+    "build-esm": "webpack --config webpack.config-esm.js",
+    "build": "npm run build-umd && npm run build-esm"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index-esm.js",
+      "require": "./dist/index-umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strivefighting/fy-image-switch.git"
+  },
+  "keywords": [
+    "image",
+    "switch",
+    "swiper",
+    "js"
+  ],
+  "author": "fychonger <454228224@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strivefighting/fy-image-switch/issues"
+  },
+  "homepage": "https://github.com/strivefighting/fy-image-switch#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

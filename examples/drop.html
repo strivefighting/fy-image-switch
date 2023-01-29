@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../dist/index-umd.js"></script>
+
+    <style>
+        #cnsBox {
+            width: 600px;
+            height: 400px;
+            background-color: gray;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="cnsBox"></div>
+    <button id="prev">上一个</button>
+    <button id="next">下一个</button>
+
+    <script>
+        console.log('ImageSwitch:', ImageSwitch)
+        const imageDropObj = ImageSwitch('drop', {
+            switchContainer: document.querySelector('#cnsBox'),
+            images: [
+                './images/1.jpg', 
+                './images/2.jpeg', 
+                './images/3.jpg', 
+                './images/4.jpg'
+            ],
+            // defaultImage: '../image/1.jpg',
+            size: 20,
+            getCurrentPage: (page) => {
+                console.log('当前页码：', page)
+            }
+        })
+
+        const prev = document.querySelector('#prev');
+        const next = document.querySelector('#next');
+
+        prev.onclick = () => {
+            imageDropObj.toPrev();
+        }
+
+        next.onclick = () => {
+            imageDropObj.toNext();
+        }
+    </script>
+</body>
+</html>

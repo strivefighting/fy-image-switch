@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../dist/index-umd.js"></script>
+    <style>
+        .image_wrap {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image_wrap"></div>
+    <button id="prev">上一个</button>
+    <button id="next">下一个</button>
+
+    <script>
+        console.log('ImageSwitch:', ImageSwitch)
+        const imageFlipObj = ImageSwitch('flip', {
+            switchContainer: document.querySelector('.image_wrap'),
+            images: [
+                './images/1.jpg',
+                './images/2.jpeg',
+                './images/3.jpg',
+                './images/4.jpg',
+            ],
+            duration: 1,
+            getCurrentPage: (page) => {
+                console.log('当前页码：', page)
+            }
+        })
+
+
+        const prev = document.querySelector('#prev');
+        const next = document.querySelector('#next');
+
+        prev.onclick = () => {
+            imageFlipObj.toPrev();
+        }
+
+        next.onclick = () => {
+            imageFlipObj.toNext();
+        }
+    </script>
+</body>
+</html>
