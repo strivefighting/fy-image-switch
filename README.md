@@ -21,10 +21,30 @@ yarn add fy-image-switch
 
 ```typescript
 // <script src="../dist/index-umd.js"></script>
-// const ImageSwitch = require(fy-image-switch);
+// const {default: ImageSwitch} = require(fy-image-switch);
 import ImageSwitch from 'fy-image-switch'
 
-// flip
+```
+
+### flip
+
+```html
+<!-- html -->
+<div class="image_wrap"></div>
+<button id="prev">上一个</button>
+<button id="next">下一个</button>
+```
+
+```css
+/* css */
+.image_wrap {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+```
+```typescript
+// js
 const imageFlipObj = ImageSwitch('flip', {
     switchContainer: document.querySelector('.image_wrap'),
     images: [
@@ -49,8 +69,27 @@ prev.onclick = () => {
 next.onclick = () => {
     imageFlipObj.toNext()
 }
+```
+### drop
 
-// drop
+```html
+<!-- html -->
+<div id="cnsBox"></div>
+    <button id="prev">上一个</button>
+    <button id="next">下一个</button>
+```
+```css
+/* css */
+#cnsBox {
+    width: 600px;
+    height: 400px;
+    background-color: gray;
+    margin: 200px auto;
+}
+```
+
+```typescript
+// js
 const imageDropObj = ImageSwitch('drop', {
     switchContainer: document.querySelector('#cnsBox'),
     images: [

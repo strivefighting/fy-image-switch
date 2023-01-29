@@ -1,8 +1,9 @@
 {
   "name": "fy-image-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some simple picture switching effects",
-  "main": "index.js",
+  "main": "./dist/index-umd.js",
+  "module": "./dist/index-esm.js",
   "scripts": {
     "build-umd": "webpack --config webpack.config-umd.js",
     "build-esm": "webpack --config webpack.config-esm.js",
@@ -14,6 +15,9 @@
   ],
   "exports": {
     ".": {
+      "browser": {
+        "default": "./dist/index-umd.js"
+      },
       "import": "./dist/index-esm.js",
       "require": "./dist/index-umd.js"
     }
