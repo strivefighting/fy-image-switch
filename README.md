@@ -82,18 +82,20 @@ next.onclick = () => {
 
 ### flip
 
+
 | Property     | Type            | Required? | Description                                                                                                                                 |
 | :----------- | :-------------- | :-------: | :------------------------------------------------------------------------------------------------------------------------------------------ |
 | switchContainer | Element          |     ✓     | A container for wrapping pictures)                                                                           |
 | images       | Array<string>          |     ✓     | An array to place the image path                                                                                                                           |
 | duration     | Number          |          | Total duration of animation `default: 1s`                                                                                                                |
 | getCurrentPage       | Function |          | A callback function is used to get the current page number |
-|
+
 
 
 
 
 ### drop
+
 
 | Property     | Type            | Required? | Description                                                                                                                                 |
 | :----------- | :-------------- | :-------: | :------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -102,7 +104,7 @@ next.onclick = () => {
 | defaultImage     | String          |          | Default picture  
 | size     | Number          |          | How many pieces to divide the picture, `default: 10   `                                                                                                           |
 | getCurrentPage       | Function |          | A callback function is used to get the current page number |
-|
+
 
 
 ## Example
