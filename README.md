@@ -83,6 +83,7 @@ next.onclick = () => {
 ### flip
 
 
+
 | Property     | Type            | Required? | Description                                                                                                                                 |
 | :----------- | :-------------- | :-------: | :------------------------------------------------------------------------------------------------------------------------------------------ |
 | switchContainer | Element          |     ✓     | A container for wrapping pictures)                                                                           |
