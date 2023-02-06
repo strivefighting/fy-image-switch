@@ -1,6 +1,6 @@
 {
   "name": "fy-image-switch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Some simple picture switching effects",
   "main": "./dist/index-umd.js",
   "module": "./dist/index-esm.js",
@@ -10,8 +10,7 @@
     "build": "npm run build-umd && npm run build-esm"
   },
   "files": [
-    "dist/",
-    "src/"
+    "dist/"
   ],
   "exports": {
     ".": {

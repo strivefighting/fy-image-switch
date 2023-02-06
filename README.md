@@ -149,6 +149,10 @@ next.onclick = () => {
 
 ## Example
 
+![demo1](https://raw.githubusercontent.com/strivefighting/fy-image/master/assets/4.gif)
+
+![demo2](https://raw.githubusercontent.com/strivefighting/fy-image/master/assets/5.gif)
+
 To see an example of the code running, follow these steps:
 
 1. Clone the repo, `https://github.com/strivefighting/fy-image-switch.git`
